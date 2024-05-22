@@ -10,3 +10,4 @@ C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repo
 C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\refint\Repository.dll
 C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.pdb
 C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\ref\Repository.dll
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.sourcelink.json

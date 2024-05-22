@@ -1,0 +1,82 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Store\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62BE42ED-7F19-4B1D-AF43-2290F5F65AAD}|..\\services\\services.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\services\\logica\\personaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BE42ED-7F19-4B1D-AF43-2290F5F65AAD}|..\\services\\services.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\services\\logica\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D07B50A-CEAF-4D3E-ADF9-DB7ECD853955}|..\\solution\\solution.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\solution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 207,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SucursalService.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\SucursalService.cs",
+              "RelativeDocumentMoniker": "..\\services\\Logica\\SucursalService.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\SucursalService.cs",
+              "RelativeToolTip": "..\\services\\Logica\\SucursalService.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T12:48:55.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
+              "RelativeDocumentMoniker": "..\\solution\\Program.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
+              "RelativeToolTip": "..\\solution\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T10:00:08.987Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 207,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonaService.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\PersonaService.cs",
+              "RelativeDocumentMoniker": "..\\services\\Logica\\PersonaService.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\PersonaService.cs",
+              "RelativeToolTip": "..\\services\\Logica\\PersonaService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T12:54:46.904Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
