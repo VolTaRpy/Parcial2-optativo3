@@ -1,0 +1,12 @@
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\bin\Debug\net6.0\Repository.deps.json
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\bin\Debug\net6.0\Repository.dll
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\bin\Debug\net6.0\Repository.pdb
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.csproj.AssemblyReference.cache
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.AssemblyInfoInputs.cache
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.AssemblyInfo.cs
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.dll
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\refint\Repository.dll
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\Repository.pdb
+C:\Users\Martinez\Desktop\Matias_Martinez\store\Repository\obj\Debug\net6.0\ref\Repository.dll
