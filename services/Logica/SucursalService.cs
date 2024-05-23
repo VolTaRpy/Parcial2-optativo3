@@ -10,29 +10,32 @@ namespace Services.Logica
     public class SucursalService : ISucursalRepository
     {
         private SucursalRepository sucursalRepository;
+        private string arroba = "@";
+        private string punto = ".";
+
         public SucursalService (string connectionString)
         {
             sucursalRepository = new SucursalRepository (connectionString);
         }
 
-        public bool add(SucursalModel sucursalModel)
+        public bool add(SucursalModel sucursal)
         {
-            throw new NotImplementedException();
+            return validarDatos(sucursal) ? sucursalRepository.add(sucursal) : throw new Exception("Error en la validacion de dator, favor verificar");
         }
 
         public bool delete(int id)
         {
-            throw new NotImplementedException();
+            return id > 0 ? sucursalRepository.delete(id) : throw new Exception("Error en la validacion de dator, favor verificar");
         }
 
         public IEnumerable<SucursalModel> GetAll()
         {
-            throw new NotImplementedException();
+            return sucursalRepository.GetAll();
         }
 
         public bool update(SucursalModel sucursalModel)
         {
-            throw new NotImplementedException();
+            return validarDatos(sucursalModel) ? sucursalRepository.update(sucursalModel) : throw new Exception("Error en la validacion de dator, favor verificar");
         }
 
         private bool validarDatos(SucursalModel sucursal)
@@ -41,7 +44,9 @@ namespace Services.Logica
                 return false;
             if (string.IsNullOrEmpty(sucursal.direccion) || sucursal.direccion.Length<9)
                 return false;
-
+            if (!sucursal.mail.Contains(arroba) || !sucursal.mail.Contains(punto))
+                return false;
+            return true;
         }
     }
 }

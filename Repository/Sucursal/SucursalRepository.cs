@@ -24,7 +24,7 @@ namespace Repository.Sucursal
         {
             try
             {
-                connection.Execute("INSER INTO sucursal(descripcion, direccion, telefono, whatsapp, mail, estado" +
+                connection.Execute("INSERT INTO sucursal(descripcion, direccion, telefono, whatsapp, mail, estado)" +
                     $"Values(@descripcion, @direccion, @telefono, @whatsapp, @mail, @estado)", sucursalModel);
                 return true;
             }
