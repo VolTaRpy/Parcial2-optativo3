@@ -25,6 +25,11 @@ namespace Services.Logica
             return id > 0 ? personaRepository.delete(id) : false;
         }
 
+        public IEnumerable<PersonaModel> get(int id)
+        {
+            return personaRepository.get(id);
+        }
+
         public IEnumerable<PersonaModel> GetAll()
         {
             return personaRepository.GetAll();
@@ -44,7 +49,7 @@ namespace Services.Logica
                 return false;
             if (string.IsNullOrEmpty(persona.documento) || persona.documento.Length < 3)
                 return false;
-            if (persona.celular.ToString().Length != 10)
+            if (persona.celular.ToString().Length != 9)
                 return false;
             //falta validacion si es numero ingresado .-.
             else

@@ -3,6 +3,7 @@ using Repository.ConfiguracionDB;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,23 @@ namespace Repository.Personas
                     "estado = @estado" +
                     $"where id_cliente = @id_cliente", personaModel);
                 return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public IEnumerable<PersonaModel> get(int id)
+        {
+            string sql = "SELECT * FROM cliente ";
+            try
+            {
+                if (id != 0)
+                {
+                    sql += $" WHERE id_cliente = {id}";
+                }
+                return connection.Query<PersonaModel>(sql);
             }
             catch (Exception ex)
             {

@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Repository.ConfiguracionDB;
+using Repository.Personas;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -36,6 +37,23 @@ namespace Repository.Factura
         {
             connection.Execute($"DELETE FROM factura where id_factura = {id}");
             return true;
+        }
+
+        public IEnumerable<FacturaModel> Get(int id)
+        {
+            string sql = "SELECT * FROM factura ";
+            try
+            {
+                if (id != 0)
+                {
+                    sql += $" WHERE id_factura = {id}";
+                }
+                return connection.Query<FacturaModel>(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public IEnumerable<FacturaModel> GetAll()

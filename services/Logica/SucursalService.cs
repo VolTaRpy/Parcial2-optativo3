@@ -28,6 +28,11 @@ namespace Services.Logica
             return id > 0 ? sucursalRepository.delete(id) : throw new Exception("Error en la validacion de dator, favor verificar");
         }
 
+        public IEnumerable<SucursalModel> Get(int id)
+        {
+            return sucursalRepository.Get(id);
+        }
+
         public IEnumerable<SucursalModel> GetAll()
         {
             return sucursalRepository.GetAll();

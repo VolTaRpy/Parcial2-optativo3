@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 using Repository.Sucursal;
 using Repository.Factura;
 
-
 string connectionString = "Host=localhost;port=5432;database=Store;Username=postgres;Password=matias;";
 PersonaService personaService = new PersonaService(connectionString);
 SucursalService sucursalService = new SucursalService(connectionString);
 FacturaService facturaService = new FacturaService(connectionString);
+DetalleFacturaService detalleFactura = new DetalleFacturaService(connectionString);
+ProductoService productoService = new ProductoService(connectionString);
 
-Console.WriteLine("Tabla cliente \n Ingrese: \n a - para insertar \n b - para listar");
+Console.WriteLine("Tabla cliente \n Ingrese: \n a - para insertar \n b - para listar \n y - para buscar");
 Console.WriteLine("Tabla sucursal \n Ingrese: \n c - para insertar \n d - para listar");
 Console.WriteLine("Tabla factura \n Ingrese: \n e - para insertar \n f - para listar");
 
@@ -25,12 +26,12 @@ if (opcion == "a")
     personaService.add(new PersonaModel
     {
         id_banco = 1,
-        nombre = "Matias",
+        nombre = "Javier",
         apellido = "Martinez",
-        documento = "4185539",
+        documento = "983539",
         direccion = "San Martin 136 c/ P. J. Caballero",
-        mail = "matias_wicho@hotmail.com",
-        celular = 985138981,
+        mail = "chapita@hotmail.com",
+        celular = 0961835983,
         estado = "Activo"
     });
 }
@@ -115,4 +116,20 @@ if (opcion == "f")
          $"sucursal = {factura.sucursal} \n"
         )
     );
+}
+if (opcion == "y")
+{
+    int bus = 8;
+    personaService.get(bus).ToList().ForEach(persona =>
+    Console.WriteLine(
+        $"id_cliente: {persona.id_cliente} \n" +
+        $"id_banco: {persona.id_banco} \n" +
+        $"Nombre: {persona.nombre} \n" +
+        $"Apellido: {persona.apellido} \n" +
+        $"Documento: {persona.documento} \n" +
+        $"Direccion: {persona.direccion} \n" +
+        $"Email: {persona.mail} \n" +
+        $"Celular: {persona.celular} \n" +
+        $"Estado: {persona.estado} \n"
+        ));
 }

@@ -25,6 +25,11 @@ namespace Services.Logica
             throw new NotImplementedException();
         }
 
+        public IEnumerable<DetalleFacturaModel> get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<DetalleFacturaModel> getAll()
         {
             throw new NotImplementedException();

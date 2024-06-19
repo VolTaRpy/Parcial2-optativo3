@@ -40,6 +40,23 @@ namespace Repository.Sucursal
             return true;
         }
 
+        public IEnumerable<SucursalModel> Get(int id)
+        {
+            string sql = "SELECT * FROM sucursal ";
+            try
+            {
+                if (id != 0)
+                {
+                    sql += $" WHERE id_sucursal = {id}";
+                }
+                return connection.Query<SucursalModel>(sql);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public IEnumerable<SucursalModel> GetAll()
         {
             return connection.Query<SucursalModel>("SELECT * FROM sucursal");

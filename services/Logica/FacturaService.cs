@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,11 @@ namespace Services.Logica
             return id > 0 ? facturaRepository.delete(id) : false;
         }
 
+        public IEnumerable<FacturaModel> Get(int id)
+        {
+            return facturaRepository.Get(id);
+        }
+
         public IEnumerable<FacturaModel> GetAll()
         {
             return facturaRepository.GetAll();
@@ -38,7 +44,7 @@ namespace Services.Logica
         {
             if (factura == null)
                 return false;
-            if (string.IsNullOrEmpty(factura.total_letras) || factura.total_letras.Length<6)
+            if (string.IsNullOrEmpty(factura.total_letras) || factura.total_letras.Length < 6)
                 return false;
             return true;
         }

@@ -13,5 +13,6 @@ namespace Repository.Factura
         bool update(FacturaModel facturaModel);
         bool delete(int id);
         IEnumerable<FacturaModel> GetAll();
+        IEnumerable<FacturaModel> Get(int id);
     }
 }
