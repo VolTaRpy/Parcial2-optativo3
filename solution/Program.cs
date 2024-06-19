@@ -39,6 +39,7 @@ if (opcion == "b")
 {
     personaService.GetAll().ToList().ForEach(persona =>
     Console.WriteLine(
+        $"id_cliente: {persona.id_cliente} \n" +
         $"id_banco: {persona.id_banco} \n" +
         $"Nombre: {persona.nombre} \n" +
         $"Apellido: {persona.apellido} \n" +

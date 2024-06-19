@@ -114,7 +114,7 @@
           "Repository": "1.0.0"
         },
         "runtime": {
-          "services.dll": {}
+          "Services.dll": {}
         }
       }
     }
