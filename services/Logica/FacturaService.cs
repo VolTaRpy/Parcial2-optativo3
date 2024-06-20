@@ -43,9 +43,18 @@ namespace Services.Logica
         }
         private bool validarDatos(FacturaModel factura)
         {
+            int num;
             if (factura == null)
                 return false;
             if (string.IsNullOrEmpty(factura.total_letras) || factura.total_letras.Length < 6)
+                return false;
+            if (!int.TryParse(Convert.ToString(factura.total), out num) )
+                return false;
+            if (!int.TryParse(Convert.ToString(factura.total_iva5), out num) )
+                return false;
+            if (!int.TryParse(Convert.ToString(factura.total_iva10), out num) )
+                return false;
+            if (!int.TryParse(Convert.ToString(factura.total_iva), out num))
                 return false;
             return true;
         }

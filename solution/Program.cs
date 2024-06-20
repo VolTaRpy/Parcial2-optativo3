@@ -177,12 +177,12 @@ if (opcion == "g")
     productoService.add(new ProductoModel
     {
         descripcion = "Remera",
-        cantidad_minima = "1",
-        cantidad_stock = "100",
-        precio_compra = "50000",
-        precio_venta = "80000",
+        cantidad_minima = 0,
+        cantidad_stock = 120,
+        precio_compra = 700000,
+        precio_venta = 110000,
         categoria = "ropa",
-        marca = "Polo",
+        marca = "Adidas",
         estado = "Disponible"
         
     }

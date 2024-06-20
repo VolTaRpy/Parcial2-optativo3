@@ -6,12 +6,6 @@
       "AbsoluteMoniker": "D:0:0:{62BE42ED-7F19-4B1D-AF43-2290F5F65AAD}|..\\services\\Services.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\services\\logica\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD2E8904-024F-4F83-A441-FE0F433D036E}|..\\Repository\\Repository.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\repository\\producto\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD2E8904-024F-4F83-A441-FE0F433D036E}|..\\Repository\\Repository.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\repository\\producto\\productomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1D07B50A-CEAF-4D3E-ADF9-DB7ECD853955}|..\\solution\\solution.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\solution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,59 +16,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 230,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
               "RelativeDocumentMoniker": "..\\solution\\Program.cs",
               "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
               "RelativeToolTip": "..\\solution\\Program.cs",
-              "ViewState": "AQIAANkAAAAAAAAAAAAuwOwAAAA6AAAA",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAuwLAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T10:00:08.987Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\ProductoService.cs",
-              "RelativeDocumentMoniker": "..\\services\\Logica\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\ProductoService.cs",
-              "RelativeToolTip": "..\\services\\Logica\\ProductoService.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAA4wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T09:45:47.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\Producto\\ProductoRepository.cs",
-              "RelativeDocumentMoniker": "..\\Repository\\Producto\\ProductoRepository.cs",
-              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\Producto\\ProductoRepository.cs",
-              "RelativeToolTip": "..\\Repository\\Producto\\ProductoRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEUAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T09:44:32.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductoModel.cs",
-              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\Producto\\ProductoModel.cs",
-              "RelativeDocumentMoniker": "..\\Repository\\Producto\\ProductoModel.cs",
-              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\Producto\\ProductoModel.cs",
-              "RelativeToolTip": "..\\Repository\\Producto\\ProductoModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T09:44:26.373Z",
               "EditorCaption": ""
             },
             {
@@ -84,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\ProductoService.cs",
+              "RelativeDocumentMoniker": "..\\services\\Logica\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\ProductoService.cs",
+              "RelativeToolTip": "..\\services\\Logica\\ProductoService.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAIA1wEIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T10:02:54.667Z",
+              "EditorCaption": ""
             }
           ]
         }

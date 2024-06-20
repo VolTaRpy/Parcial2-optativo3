@@ -48,19 +48,19 @@ namespace Services.Logica
                 return false;
             if (string.IsNullOrEmpty(producto.descripcion))
                 return false;
-            if (string.IsNullOrEmpty(producto.cantidad_minima))
+            if (string.IsNullOrEmpty(Convert.ToString(producto.cantidad_minima)))
                 return false;
-            if (!int.TryParse(producto.cantidad_minima, out num) || num<1)
+            if (!int.TryParse(Convert.ToString(producto.cantidad_minima), out num) || num<1)
                 return false;
-            if (string.IsNullOrEmpty(producto.cantidad_stock))
+            if (string.IsNullOrEmpty(Convert.ToString(producto.cantidad_stock)))
                 return false;
-            if (string.IsNullOrEmpty(producto.precio_compra))
+            if (string.IsNullOrEmpty(Convert.ToString(producto.precio_compra)))
                 return false;
-            if (!int.TryParse(producto.precio_compra, out num) || num <= 0)
+            if (!int.TryParse(Convert.ToString(producto.precio_compra), out num) || num <= 0)
                 return false;
-            if (string.IsNullOrEmpty(producto.precio_venta))
+            if (string.IsNullOrEmpty(Convert.ToString(producto.precio_venta)))
                 return false;
-            if (!int.TryParse(producto.precio_venta, out num) || num <= 0)
+            if (!int.TryParse(Convert.ToString(producto.precio_venta), out num) || num <= 0)
                 return false;
             if (string.IsNullOrEmpty(producto.categoria))
                 return false;
