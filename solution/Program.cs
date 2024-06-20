@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Repository.Sucursal;
 using Repository.Factura;
+using Repository.Producto;
 
 string connectionString = "Host=localhost;port=5432;database=Store;Username=postgres;Password=matias;";
 PersonaService personaService = new PersonaService(connectionString);
@@ -16,8 +17,12 @@ DetalleFacturaService detalleFactura = new DetalleFacturaService(connectionStrin
 ProductoService productoService = new ProductoService(connectionString);
 
 Console.WriteLine("Tabla cliente \n Ingrese: \n a - para insertar \n b - para listar \n y - para buscar");
-Console.WriteLine("Tabla sucursal \n Ingrese: \n c - para insertar \n d - para listar");
-Console.WriteLine("Tabla factura \n Ingrese: \n e - para insertar \n f - para listar");
+Console.WriteLine("Tabla sucursal \n Ingrese: \n c - para insertar \n d - para listar \n z - para buscar");
+Console.WriteLine("Tabla factura \n Ingrese: \n e - para insertar \n f - para listar \n x - para buscar");
+Console.WriteLine("Tabla producto \n Ingrese: \n g - para insertar \n h - para listar \n i - para buscar");
+Console.WriteLine("Tabla detalle \n Ingrese: \n j - facturar");
+
+
 
 string opcion = Console.ReadLine();
 
@@ -133,3 +138,109 @@ if (opcion == "y")
         $"Estado: {persona.estado} \n"
         ));
 }
+if (opcion == "z")
+{
+    int bus = 1;
+    sucursalService.Get(bus).ToList().ForEach(sucursal =>
+    Console.WriteLine(
+        $"id_sucursal: {sucursal.id_sucursal} \n" +
+        $"descripcion: {sucursal.descripcion} \n" +
+        $"direccion: {sucursal.direccion} \n" +
+        $"telefono: {sucursal.telefono} \n" +
+        $"whatsapp: {sucursal.whatsapp} \n" +
+        $"mail: {sucursal.mail} \n" +
+        $"estado: {sucursal.estado} \n"
+        )
+    );
+}
+
+if (opcion == "x")
+{
+    int bus = 1;
+    facturaService.Get(bus).ToList().ForEach(factura =>
+    Console.WriteLine(
+         $"id_cliente: {factura.id_cliente}\n" +
+         $"id_sucursal: {factura.id_sucursal}\n" +
+         $"numero_factura: {factura.numero_factura}\n" +
+         $"fecha_hora: {factura.fecha_hora}\n" +
+         $"total: {factura.total}\n" +
+         $"total_iva5:{factura.total_iva5}\n" +
+         $"total_iva10 = {factura.total_iva10} \n" +
+         $"total_iva = {factura.total_iva} \n" +
+         $"total_letras = {factura.total_letras} \n" +
+         $"sucursal = {factura.sucursal} \n"
+        )
+    );
+}
+if (opcion == "g")
+{
+    productoService.add(new ProductoModel
+    {
+        descripcion = "Remera",
+        cantidad_minima = "1",
+        cantidad_stock = "100",
+        precio_compra = "50000",
+        precio_venta = "80000",
+        categoria = "ropa",
+        marca = "Polo",
+        estado = "Disponible"
+        
+    }
+   );
+}
+if (opcion == "h")
+{
+    productoService.GetAll().ToList().ForEach(producto =>
+    Console.WriteLine(
+        $"Id_producto: {producto.id_producto} \n" +
+        $"Descripcion: {producto.descripcion} \n" +
+        $"Cantidad_minima: {producto.cantidad_minima} \n" +
+        $"Cantidad_stock: {producto.cantidad_stock} \n" +
+        $"Precio_compra: {producto.precio_compra} \n" +
+        $"Precio_venta: {producto.precio_venta} \n" +
+        $"Categoria: {producto.categoria} \n" +
+        $"Marca: {producto.marca} \n" +
+        $"Estado: {producto.estado} \n"
+        )
+    );
+}
+if (opcion == "i")
+{
+    int bus=1;
+    productoService.Get(bus).ToList().ForEach(producto =>
+    Console.WriteLine(
+        $"Id_producto: {producto.id_producto} \n" +
+        $"Descripcion: {producto.descripcion} \n" +
+        $"Cantidad_minima: {producto.cantidad_minima} \n" +
+        $"Cantidad_stock: {producto.cantidad_stock} \n" +
+        $"Precio_compra: {producto.precio_compra} \n" +
+        $"Precio_venta: {producto.precio_venta} \n" +
+        $"Categoria: {producto.categoria} \n" +
+        $"Marca: {producto.marca} \n" +
+        $"Estado: {producto.estado} \n"
+        )
+    );
+}
+
+if (opcion == "j")
+{
+    int subtotal = 0;
+    Console.WriteLine("Posibles Productos a facturar");
+    productoService.GetAll().ToList().ForEach(producto =>
+    Console.WriteLine(
+        $"Id_producto: {producto.id_producto} \n" +
+        $"Descripcion: {producto.descripcion} \n" +
+        $"Precio: {producto.precio_venta} \n" +
+        $"Marca: {producto.marca} \n"
+        )
+    );
+    Console.WriteLine("Elija una id y la cantidad a llevar");
+    string ropa = Console.ReadLine(); 
+    string cant = Console.ReadLine();
+    productoService.Get(Convert.ToInt32(ropa)).ToList().ForEach(producto =>
+    subtotal = Convert.ToInt32(producto.precio_venta)
+    );
+    Convert.ToInt32(cant);
+    subtotal = Convert.ToInt32(subtotal) * Convert.ToInt32(cant);
+    Console.WriteLine($"precio a pagar {subtotal}");
+} 

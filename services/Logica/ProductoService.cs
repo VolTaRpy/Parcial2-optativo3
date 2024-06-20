@@ -16,32 +16,60 @@ namespace Services.Logica
         }
         public bool add(ProductoModel producto)
         {
-            throw new NotImplementedException();
+            return validarDatos(producto) ? productoRepository.add(producto) : throw new Exception("Error en la validacion de datos, favor corroborar");
         }
 
         public bool delete(int id)
         {
-            throw new NotImplementedException();
+            return id > 0 ? productoRepository.delete(id) : false;
         }
 
         public IEnumerable<ProductoModel> Get(int id)
         {
-            throw new NotImplementedException();
+            return productoRepository.Get(id);
         }
 
         public IEnumerable<ProductoModel> GetAll()
         {
-            throw new NotImplementedException();
+            return productoRepository.GetAll();
         }
 
         public bool update(ProductoModel producto)
         {
-            throw new NotImplementedException();
+            return validarDatos(producto) ? productoRepository.update(producto) : throw new Exception("Error en la validacion de datos, favor corroborar");
         }
 
         private bool validarDatos(ProductoModel producto)
         {
+            int num;
 
+
+            if (producto == null)
+                return false;
+            if (string.IsNullOrEmpty(producto.descripcion))
+                return false;
+            if (string.IsNullOrEmpty(producto.cantidad_minima))
+                return false;
+            if (!int.TryParse(producto.cantidad_minima, out num) || num<1)
+                return false;
+            if (string.IsNullOrEmpty(producto.cantidad_stock))
+                return false;
+            if (string.IsNullOrEmpty(producto.precio_compra))
+                return false;
+            if (!int.TryParse(producto.precio_compra, out num) || num <= 0)
+                return false;
+            if (string.IsNullOrEmpty(producto.precio_venta))
+                return false;
+            if (!int.TryParse(producto.precio_venta, out num) || num <= 0)
+                return false;
+            if (string.IsNullOrEmpty(producto.categoria))
+                return false;
+            if (string.IsNullOrEmpty(producto.marca))
+                return false;
+            if (string.IsNullOrEmpty(producto.estado))
+                return false;
+
+            return true;
         }
     }
 }

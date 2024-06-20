@@ -3,7 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{62BE42ED-7F19-4B1D-AF43-2290F5F65AAD}|..\\services\\Services.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\services\\logica\\sucursalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD2E8904-024F-4F83-A441-FE0F433D036E}|..\\Repository\\Repository.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\repository\\detallefactura\\detallefacturarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BE42ED-7F19-4B1D-AF43-2290F5F65AAD}|..\\services\\Services.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\services\\logica\\detallefacturaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD2E8904-024F-4F83-A441-FE0F433D036E}|..\\Repository\\Repository.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\repository\\detallefactura\\detallefacturamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D07B50A-CEAF-4D3E-ADF9-DB7ECD853955}|..\\solution\\solution.csproj|c:\\users\\martinez\\desktop\\matias_martinez\\store\\solution\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -16,33 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 230,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
               "RelativeDocumentMoniker": "..\\solution\\Program.cs",
               "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\solution\\Program.cs",
               "RelativeToolTip": "..\\solution\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABIAAAA",
+              "ViewState": "AQIAANkAAAAAAAAAAAAuwOwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T10:00:08.987Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SucursalService.cs",
-              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\SucursalService.cs",
-              "RelativeDocumentMoniker": "..\\services\\Logica\\SucursalService.cs",
-              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\SucursalService.cs",
-              "RelativeToolTip": "..\\services\\Logica\\SucursalService.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwDgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T23:52:00.743Z",
               "EditorCaption": ""
             },
             {
@@ -52,6 +45,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DetalleFacturaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\DetalleFactura\\DetalleFacturaRepository.cs",
+              "RelativeDocumentMoniker": "..\\Repository\\DetalleFactura\\DetalleFacturaRepository.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\DetalleFactura\\DetalleFacturaRepository.cs",
+              "RelativeToolTip": "..\\Repository\\DetalleFactura\\DetalleFacturaRepository.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwEgAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T08:46:49.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetalleFacturaModel.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\DetalleFactura\\DetalleFacturaModel.cs",
+              "RelativeDocumentMoniker": "..\\Repository\\DetalleFactura\\DetalleFacturaModel.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\Repository\\DetalleFactura\\DetalleFacturaModel.cs",
+              "RelativeToolTip": "..\\Repository\\DetalleFactura\\DetalleFacturaModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T08:45:19.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DetalleFacturaService.cs",
+              "DocumentMoniker": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\DetalleFacturaService.cs",
+              "RelativeDocumentMoniker": "..\\services\\Logica\\DetalleFacturaService.cs",
+              "ToolTip": "C:\\Users\\Martinez\\Desktop\\Matias_Martinez\\store\\services\\Logica\\DetalleFacturaService.cs",
+              "RelativeToolTip": "..\\services\\Logica\\DetalleFacturaService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T08:44:25.592Z",
+              "EditorCaption": ""
             }
           ]
         }

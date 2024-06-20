@@ -8,7 +8,7 @@ namespace Repository.DetalleFactura
 {
     public class DetalleFacturaModel
     {
-        public int id { get; set; }
+        public int id_detalle_factura { get; set; }
         public int id_factura { get; set; }
         public int id_producto { get; set; }
         public int cantidad_producto { get; set; }

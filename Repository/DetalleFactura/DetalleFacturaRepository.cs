@@ -70,7 +70,7 @@ namespace Repository.DetalleFactura
                     "id_producto = @id_producto, " +
                     "cantidad_producto = @cantidad_producto, " +
                     "subtotal = @subtotal" +
-                    "WHERE id_detalle_factura = @id_detalle_Factura", detalleFactura);
+                    "WHERE id_detalle_factura = @id_detalle_factura", detalleFactura);
                 return true;
             }
             catch(Exception ex)

@@ -22,8 +22,8 @@ namespace Repository.Producto
         {
             try
             {
-                connection.Execute("INSERT INTO producto(descipcion, cantidad_minima, cantidad_stock, precio_compra, precio_venta, categoria, marca, estado)" +
-                    $"Values(@descipcion, @cantidad_minima, @cantidad_stock, @precio_compra, @precio_venta, @categoria, @marca, @estado)", producto);
+                connection.Execute("INSERT INTO producto(descripcion, cantidad_minima, cantidad_stock, precio_compra, precio_venta, categoria, marca, estado)" +
+                    $"Values(@descripcion, @icantidadmin, @icantidad_stock, @preciocompra, @precioventa, @categoria, @marca, @estado)", producto);
                 return true;
             }
             catch (Exception ex)
@@ -65,7 +65,7 @@ namespace Repository.Producto
             try 
             {
                 connection.Execute("UPDATE producto SET" +
-                    "descipcion = @descipcion, " +
+                    "descripcion = @descripcion, " +
                     "cantidad_minima = @cantidad_minima, " +
                     "cantidad_stock = @cantidad_stock, " +
                     "precio_compra = @precio_compra, " +
