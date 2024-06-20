@@ -23,7 +23,7 @@ namespace Repository.Producto
             try
             {
                 connection.Execute("INSERT INTO producto(descripcion, cantidad_minima, cantidad_stock, precio_compra, precio_venta, categoria, marca, estado)" +
-                    $"Values(@descripcion, @icantidadmin, @icantidad_stock, @preciocompra, @precioventa, @categoria, @marca, @estado)", producto);
+                    $"Values(@descripcion, @cantidad_minima, @cantidad_stock, @precio_compra, @precio_venta, @categoria, @marca, @estado)", producto);
                 return true;
             }
             catch (Exception ex)
