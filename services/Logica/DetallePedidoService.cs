@@ -1,4 +1,4 @@
-﻿using Repository.DetalleFactura;
+﻿using Repository.DetallePedido;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace Services.Logica
 {
-    public class DetalleFacturaService : IDetalleFactura
+    public class DetallePedidoService : IDetallePedido
     {
-        private DetalleFacturaRepository detalleFacturaRepository;
-        public DetalleFacturaService(string connectionString) 
+        private DetallePedidoRepository detallePedidoRepository;
+        public DetallePedidoService(string connectionString) 
         {
-            detalleFacturaRepository = new DetalleFacturaRepository(connectionString);
+            detallePedidoRepository = new DetallePedidoRepository(connectionString);
         }
-        public bool add(DetalleFacturaModel detalleFactura)
+
+        public bool add(DetallePedidoModel detallePedido)
         {
             throw new NotImplementedException();
         }
@@ -25,17 +26,17 @@ namespace Services.Logica
             throw new NotImplementedException();
         }
 
-        public IEnumerable<DetalleFacturaModel> get(int id)
+        public IEnumerable<DetallePedidoModel> get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<DetalleFacturaModel> getAll()
+        public IEnumerable<DetallePedidoModel> getAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool update(DetalleFacturaModel detalleFactura)
+        public bool update(DetallePedidoModel detallePedido)
         {
             throw new NotImplementedException();
         }

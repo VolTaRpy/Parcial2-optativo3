@@ -8,23 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.Personas
+namespace Repository.Proveedor
 {
-    public class PersonaRepository : IPersonaRepository
+    public class ProveedorRepository : IProveedorRepository
     {
         IDbConnection connection; 
 
-        public PersonaRepository(string connectionString)
+        public ProveedorRepository(string connectionString)
         {
             connection = new ConnectionDB(connectionString).OpenConnection();
         }
 
-        public bool add(PersonaModel personaModel)
+        public bool add(ProveedorModel proveedorModel)
         {
             try
             {
-                connection.Execute("INSERT INTO cliente(id_banco, nombre, apellido, documento, direccion, mail, celular, estado)"+
-                    $"Values(@id_banco, @nombre, @apellido, @documento, @direccion, @mail, @celular, @estado)", personaModel);
+                connection.Execute("INSERT INTO proveedor ( razonsocial, documento, direccion, mail, celular, estado)" +
+                    $"Values(@razonsocial, @documento, @direccion, @mail, @celular, @estado)", proveedorModel);
                 return true;
             }
             catch (Exception ex)
@@ -33,31 +33,29 @@ namespace Repository.Personas
             }
         }
 
-        public IEnumerable<PersonaModel> GetAll() 
+        public IEnumerable<ProveedorModel> GetAll() 
         {
-            return connection.Query<PersonaModel>("SELECT * FROM cliente");
+            return connection.Query<ProveedorModel>("SELECT * FROM proveedor");
         }
 
         public bool delete(int id) 
         {
-            connection.Execute($"DELETE FROM cliente WHERE id_cliente = {id}");
+            connection.Execute($"DELETE FROM proveedor WHERE id_proveedor = {id}");
             return true;
         }
 
-        public bool update(PersonaModel personaModel) 
+        public bool update(ProveedorModel proveedorModel) 
         {
             try
             {
-                connection.Execute("UPDATE cliente SET " +
-                    "id_banco = @id_banco," +
-                    "nombre = @nombre," +
-                    "apellido = @apellido," +
+                connection.Execute("UPDATE proveedor SET " +
+                    "razonsocial = @razonsocial," +
                     "documento = @documento," +
                     "direccion = @direccion," +
                     "mail = @mail," +
                     "celular = @celular," +
                     "estado = @estado" +
-                    $"where id_cliente = @id_cliente", personaModel);
+                    $"where id_proveedor = @id_proveedor", proveedorModel);
                 return true;
             }
             catch (Exception ex)
@@ -66,16 +64,16 @@ namespace Repository.Personas
             }
         }
 
-        public IEnumerable<PersonaModel> get(int id)
+        public IEnumerable<ProveedorModel> get(int id)
         {
-            string sql = "SELECT * FROM cliente ";
+            string sql = "SELECT * FROM proveedor ";
             try
             {
                 if (id != 0)
                 {
-                    sql += $" WHERE id_cliente = {id}";
+                    sql += $" WHERE id_proveedor = {id}";
                 }
-                return connection.Query<PersonaModel>(sql);
+                return connection.Query<ProveedorModel>(sql);
             }
             catch (Exception ex)
             {

@@ -1,24 +1,24 @@
 ﻿using Services.Logica;
-using Repository.Personas;
+using Repository.Proveedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Repository.Sucursal;
-using Repository.Factura;
+using Repository.Pedido_Compra;
 using Repository.Producto;
 
-string connectionString = "Host=localhost;port=5432;database=Store;Username=postgres;Password=matias;";
-PersonaService personaService = new PersonaService(connectionString);
+string connectionString = "Host=localhost;port=5432;database=Examen;Username=postgres;Password=matias;";
+ProveedorService proveedorService = new ProveedorService(connectionString);
 SucursalService sucursalService = new SucursalService(connectionString);
-FacturaService facturaService = new FacturaService(connectionString);
-DetalleFacturaService detalleFactura = new DetalleFacturaService(connectionString);
+PedidoService pedidoService = new PedidoService(connectionString);
+DetallePedidoService detallePedido = new DetallePedidoService(connectionString);
 ProductoService productoService = new ProductoService(connectionString);
 
-Console.WriteLine("Tabla cliente \n Ingrese: \n a - para insertar \n b - para listar \n y - para buscar");
+Console.WriteLine("Tabla proveedor \n Ingrese: \n a - para insertar \n b - para listar \n y - para buscar");
 Console.WriteLine("Tabla sucursal \n Ingrese: \n c - para insertar \n d - para listar \n z - para buscar");
-Console.WriteLine("Tabla factura \n Ingrese: \n e - para insertar \n f - para listar \n x - para buscar");
+Console.WriteLine("Tabla pedido \n Ingrese: \n e - para insertar \n f - para listar \n x - para buscar");
 Console.WriteLine("Tabla producto \n Ingrese: \n g - para insertar \n h - para listar \n i - para buscar");
 Console.WriteLine("Tabla detalle \n Ingrese: \n j - facturar");
 
@@ -28,11 +28,9 @@ string opcion = Console.ReadLine();
 
 if (opcion == "a")
 {
-    personaService.add(new PersonaModel
+    proveedorService.add(new ProveedorModel
     {
-        id_banco = 1,
-        nombre = "Javier",
-        apellido = "Martinez",
+        razonsocial = "Martinez S.A",
         documento = "983539",
         direccion = "San Martin 136 c/ P. J. Caballero",
         mail = "chapita@hotmail.com",
@@ -43,17 +41,15 @@ if (opcion == "a")
 
 if (opcion == "b")
 {
-    personaService.GetAll().ToList().ForEach(persona =>
+    proveedorService.GetAll().ToList().ForEach(proveedor =>
     Console.WriteLine(
-        $"id_cliente: {persona.id_cliente} \n" +
-        $"id_banco: {persona.id_banco} \n" +
-        $"Nombre: {persona.nombre} \n" +
-        $"Apellido: {persona.apellido} \n" +
-        $"Documento: {persona.documento} \n" +
-        $"Direccion: {persona.direccion} \n" +
-        $"Email: {persona.mail} \n" +
-        $"Celular: {persona.celular} \n" +
-        $"Estado: {persona.estado} \n"
+        $"id_proveedor: {proveedor.id_proveedor} \n" +
+        $"razonsocial: {proveedor.razonsocial} \n" +
+        $"Documento: {proveedor.documento} \n" +
+        $"Direccion: {proveedor.direccion} \n" +
+        $"Email: {proveedor.mail} \n" +
+        $"Celular: {proveedor.celular} \n" +
+        $"Estado: {proveedor.estado} \n"
         )
     );
 }
@@ -89,53 +85,40 @@ if (opcion == "d")
 //probando_fk
 if(opcion == "e")
 {
-    facturaService.add(new FacturaModel
+    pedidoService.add(new PedidoModel
     {
-        id_cliente = 3,
+        id_proveedor = 3,
         id_sucursal = 3,
-        numero_factura = "80014723-333",
         fecha_hora = new DateTime(1990, 10, 5),
         total = 3000000,
-        total_iva5 = 0,
-        total_iva10 = 300000,
-        total_iva = 300000,
-        total_letras = "un millon3",
-        sucursal = "luque"
+
     }
         );
 }
 
 if (opcion == "f")
 {
-    facturaService.GetAll().ToList().ForEach(factura =>
+    pedidoService.GetAll().ToList().ForEach(pedido =>
     Console.WriteLine(
-         $"id_cliente: {factura.id_cliente}\n"+
-         $"id_sucursal: {factura.id_sucursal}\n"+
-         $"numero_factura: {factura.numero_factura}\n"+
-         $"fecha_hora: {factura.fecha_hora}\n"+
-         $"total: {factura.total}\n"+
-         $"total_iva5:{factura.total_iva5}\n"+
-         $"total_iva10 = {factura.total_iva10} \n"+
-         $"total_iva = {factura.total_iva} \n"+
-         $"total_letras = {factura.total_letras} \n"+
-         $"sucursal = {factura.sucursal} \n"
-        )
+         $"id_pedido: {pedido.id_pedido}\n" +
+         $"id_proveedor: {pedido.id_proveedor}\n"+
+         $"id_sucursal: {pedido.id_sucursal}\n"+
+         $"fecha_hora: {pedido.fecha_hora}\n"+
+         $"total: {pedido.total}\n")
     );
 }
 if (opcion == "y")
 {
     int bus = 8;
-    personaService.get(bus).ToList().ForEach(persona =>
+    proveedorService.get(bus).ToList().ForEach(proveedor =>
     Console.WriteLine(
-        $"id_cliente: {persona.id_cliente} \n" +
-        $"id_banco: {persona.id_banco} \n" +
-        $"Nombre: {persona.nombre} \n" +
-        $"Apellido: {persona.apellido} \n" +
-        $"Documento: {persona.documento} \n" +
-        $"Direccion: {persona.direccion} \n" +
-        $"Email: {persona.mail} \n" +
-        $"Celular: {persona.celular} \n" +
-        $"Estado: {persona.estado} \n"
+        $"id_proveedor: {proveedor.id_proveedor} \n" +
+        $"RazonSocial: {proveedor.razonsocial} \n" +
+        $"Documento: {proveedor.documento} \n" +
+        $"Direccion: {proveedor.direccion} \n" +
+        $"Email: {proveedor.mail} \n" +
+        $"Celular: {proveedor.celular} \n" +
+        $"Estado: {proveedor.estado} \n"
         ));
 }
 if (opcion == "z")
@@ -157,19 +140,12 @@ if (opcion == "z")
 if (opcion == "x")
 {
     int bus = 1;
-    facturaService.Get(bus).ToList().ForEach(factura =>
+    pedidoService.Get(bus).ToList().ForEach(pedido =>
     Console.WriteLine(
-         $"id_cliente: {factura.id_cliente}\n" +
-         $"id_sucursal: {factura.id_sucursal}\n" +
-         $"numero_factura: {factura.numero_factura}\n" +
-         $"fecha_hora: {factura.fecha_hora}\n" +
-         $"total: {factura.total}\n" +
-         $"total_iva5:{factura.total_iva5}\n" +
-         $"total_iva10 = {factura.total_iva10} \n" +
-         $"total_iva = {factura.total_iva} \n" +
-         $"total_letras = {factura.total_letras} \n" +
-         $"sucursal = {factura.sucursal} \n"
-        )
+         $"id_proveedor: {pedido.id_proveedor}\n" +
+         $"id_sucursal: {pedido.id_sucursal}\n" +
+         $"fecha_hora: {pedido.fecha_hora}\n" +
+         $"total: {pedido.total}\n")
     );
 }
 if (opcion == "g")
